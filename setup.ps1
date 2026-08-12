@@ -194,7 +194,7 @@ if (Test-Path -LiteralPath $selftestLog) {
 if ($rc -eq 0) {
   Write-Host ""
   Write-Host "Setup complete. Next steps:" -ForegroundColor Green
-  Write-Host "  1. Fully quit Codex (all windows) and reopen it." -ForegroundColor Green
+  Write-Host "  1. Fully quit Codex (all windows) and reopen it (recommended; base_url changes usually apply to existing sessions too)." -ForegroundColor Green
   Write-Host "  2. Start a NEW task and ask the main agent to spawn a subagent, e.g.:" -ForegroundColor Green
   Write-Host "     TOKEN=DS_OK_12345   only reply with this token." -ForegroundColor Green
   Write-Host "  3. adapter.log should contain 'rewrote agent message' when it happens." -ForegroundColor Green

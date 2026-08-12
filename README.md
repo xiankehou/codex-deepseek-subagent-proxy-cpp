@@ -58,7 +58,7 @@ powershell -ExecutionPolicy Bypass -File setup.ps1
 4. 注册登录自启（隐藏方式）和每分钟看护计划任务（无窗口），适配器崩溃后 1 分钟内自动拉起
 5. 启动适配器并自检：本地 8787 端口监听 + `https://api.deepseek.com` 可达
 
-部署后必须：**完全退出 Codex（所有窗口）→ 重新打开 → 新建任务**，旧会话不会加载新配置。
+部署后建议：**完全退出 Codex（所有窗口）→ 重新打开 → 新建任务**，确保 `models.json`、subagent 工具注入等改动完整生效。注：`base_url` 这类配置改动对旧会话通常也会生效，不必重启即可切换。
 
 ## 验证（smoke test）
 
@@ -110,6 +110,8 @@ Payload:
 3. 检查 `selftest.log` / `adapter.log`
 4. 提醒用户完全退出并重启 Codex、新建任务
 5. 派发 marker 子代理任务验证 `rewrote agent message` 是否出现
+
+注：`base_url` 改动对旧会话通常也会生效；完全重启主要用于确保 `models.json`（subagent 工具注入）等改动完整生效。
 
 更详细的约束见 [AGENTS.md](AGENTS.md)。
 

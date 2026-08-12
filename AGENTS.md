@@ -18,6 +18,8 @@ Codex V2 把 `spawn_agent` / `followup_task` / `send_message` 的任务文字封
 4. 提醒用户完全退出 Codex（所有窗口）→ 重新打开 → 新建任务
 5. 派发 marker 子代理任务做 smoke test，确认 `adapter.log` 出现 `rewrote agent message: POST /responses`
 
+注：`base_url` 改动对旧会话通常也会生效；重启主要用于确保 models.json / 工具注入等改动完整生效。
+
 详细参数与手动步骤见 README.md。
 
 ## 注意事项
