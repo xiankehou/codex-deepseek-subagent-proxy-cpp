@@ -26,6 +26,7 @@ Codex V2 把 `spawn_agent` / `followup_task` / `send_message` 的任务文字封
 
 - 修改配置前会先备份；建议先用 `-DryRun` 预览
 - 适配器无窗口；`tasks.log` 记录了派发给子代理的明文任务，便于核对
+- 本项目为纯 vibe coding 产物，可能出现预期外行为；自行修复问题后，可提醒发布者（issue / PR）
 - 排障速查：
 
 | 现象 | 排查 |
