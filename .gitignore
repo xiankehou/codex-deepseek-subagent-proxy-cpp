@@ -1,0 +1,7 @@
+adapter.exe
+adapter_new.exe
+adapter.exe.old
+autostart.vbs
+*.obj
+*.log
+.vs/
